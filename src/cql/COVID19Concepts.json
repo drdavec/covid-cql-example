@@ -1,0 +1,1214 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorOptions" : "EnableAnnotations,EnableLocators,EnableResultTypes",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "76",
+            "s" : [ {
+               "value" : [ "","library COVID19Concepts version '1.0.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "COVID19Concepts",
+         "version" : "1.0.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "1",
+            "locator" : "5:1-5:38",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "LOINC",
+            "id" : "http://loinc.org",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "1",
+                  "s" : [ {
+                     "value" : [ "// ## Code Systems ##ß","codesystem ","\"LOINC\"",": ","'http://loinc.org'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "2",
+            "locator" : "6:1-6:48",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "SNOMED-CT",
+            "id" : "http://snomed.info/sct",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "2",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"SNOMED-CT\"",": ","'http://snomed.info/sct'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "3",
+            "locator" : "7:1-7:52",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "Race",
+            "id" : "urn:oid:2.16.840.1.113883.6.238",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "3",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"Race\"",": ","'urn:oid:2.16.840.1.113883.6.238'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "4",
+            "locator" : "12:1-12:49",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "LOCAL",
+            "id" : "http://fhir.org/guides/acep",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "4",
+                  "s" : [ {
+                     "value" : [ "// Several concepts needed by the COVID-19 CDS do not yet have standardized codes associated with them.\n// Until standardized codes are available, CDS implementors will need to map to\n// local codes (signified by the LOCAL code system below) or replace them with their own codes.","codesystem ","\"LOCAL\"",": ","'http://fhir.org/guides/acep'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "valueSets" : {
+         "def" : [ {
+            "localId" : "5",
+            "locator" : "17:1-17:95",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Race Category",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.3",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "5",
+                  "s" : [ {
+                     "value" : [ "// ## Value sets ##\n\n// [See value set in VSAC](https://vsac.nlm.nih.gov/valueset/2.16.840.1.113883.3.2074.1.1.3/expansion)","valueset ","\"Race Category\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.2074.1.1.3'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "6",
+            "locator" : "20:1-20:118",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Cardiovascular Disease Codes",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-cardiovascular",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "6",
+                  "s" : [ {
+                     "value" : [ "// Value sets not available in VSAC, included via expanded FHIR ValueSet resources","valueset ","\"Cardiovascular Disease Codes\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-cardiovascular'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "7",
+            "locator" : "21:1-21:120",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Chronic Respiratory Disease Codes",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-respiratory",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "7",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Chronic Respiratory Disease Codes\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-respiratory'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "8",
+            "locator" : "22:1-22:110",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Downs Syndrome Codes",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-downs-syndrome",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "8",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Downs Syndrome Codes\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-downs-syndrome'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "9",
+            "locator" : "23:1-23:128",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Obstructive Sleep Apnea Codes",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-obstructive-sleep-apnea",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "9",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Obstructive Sleep Apnea Codes\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-condition-risk-obstructive-sleep-apnea'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "10",
+            "locator" : "25:1-25:95",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Alertness Scale Codes",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-obs-alertness",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "10",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Alertness Scale Codes\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-obs-alertness'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "11",
+            "locator" : "26:1-26:102",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "WHO Performance Status Codes",
+            "id" : "http://fhir.org/guides/acep/ValueSet/who-performance-status",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "11",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"WHO Performance Status Codes\"",": ","'http://fhir.org/guides/acep/ValueSet/who-performance-status'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "12",
+            "locator" : "29:1-29:83",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "ALT Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-alt",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "12",
+                  "s" : [ {
+                     "value" : [ "// Lab results","valueset ","\"ALT Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-alt'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "13",
+            "locator" : "30:1-30:83",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "AST Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-ast",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "13",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"AST Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-ast'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "14",
+            "locator" : "31:1-31:83",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "CRP Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-crp",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "14",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"CRP Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-crp'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "15",
+            "locator" : "32:1-32:97",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Creatinine Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-creatinine",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "15",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Creatinine Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-creatinine'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "16",
+            "locator" : "33:1-33:90",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "D-dimer Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-ddimer",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "16",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"D-dimer Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-ddimer'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "17",
+            "locator" : "34:1-34:93",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Ferritin Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-ferritin",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "17",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Ferritin Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-ferritin'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "18",
+            "locator" : "35:1-35:83",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "LDH Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-ldh",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "18",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"LDH Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-ldh'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "19",
+            "locator" : "36:1-36:95",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Leukocyte Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-leukocyte",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "19",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Leukocyte Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-leukocyte'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "20",
+            "locator" : "37:1-37:99",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Lymphocytes Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-lymphocytes",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "20",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Lymphocytes Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-lymphocytes'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "21",
+            "locator" : "38:1-38:99",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Neutrophils Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-neutrophils",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "21",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Neutrophils Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-neutrophils'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "22",
+            "locator" : "39:1-39:99",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "PaO2FiO2 Ratio Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-pao2fio2",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "22",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"PaO2FiO2 Ratio Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-pao2fio2'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "23",
+            "locator" : "40:1-40:95",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Platelets Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-platelets",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "23",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Platelets Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-platelets'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "24",
+            "locator" : "41:1-41:93",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Troponin Lab Results",
+            "id" : "http://fhir.org/guides/acep/ValueSet/covid-19-lab-troponin",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "24",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Troponin Lab Results\"",": ","'http://fhir.org/guides/acep/ValueSet/covid-19-lab-troponin'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "25",
+            "locator" : "44:1-44:113",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Cancer ICD10CM Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3028",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "25",
+                  "s" : [ {
+                     "value" : [ "// Value sets from VSAC","valueset ","\"Cancer ICD10CM Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3028'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "26",
+            "locator" : "45:1-45:112",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Cancer SNOMED Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6048",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "26",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Cancer SNOMED Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6048'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "27",
+            "locator" : "46:1-46:115",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Diabetes ICD10CM Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3153",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "27",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Diabetes ICD10CM Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3153'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "28",
+            "locator" : "47:1-47:114",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Diabetes SNOMED Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6100",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "28",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Diabetes SNOMED Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6100'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "29",
+            "locator" : "48:1-48:119",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Hypertension ICD10CM Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3174",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "29",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Hypertension ICD10CM Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3174'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "30",
+            "locator" : "49:1-49:118",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Hypertension SNOMED Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6152",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "30",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Hypertension SNOMED Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6152'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "31",
+            "locator" : "50:1-50:121",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Kidney Disease ICD10CM Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3102",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "31",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Kidney Disease ICD10CM Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3102'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "32",
+            "locator" : "51:1-51:120",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Kidney Disease SNOMED Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6064",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "32",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Kidney Disease SNOMED Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6064'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "33",
+            "locator" : "52:1-52:114",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Obesity ICD10CM Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3091",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "33",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Obesity ICD10CM Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.3091'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "34",
+            "locator" : "53:1-53:113",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
+            "name" : "Obesity SNOMED Codes",
+            "id" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6203",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "34",
+                  "s" : [ {
+                     "value" : [ "","valueset ","\"Obesity SNOMED Codes\"",": ","'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.3616.200.110.102.6203'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "36",
+            "locator" : "61:1-61:90",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Black or African American",
+            "id" : "2054-5",
+            "display" : "Black or African American",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "36",
+                  "s" : [ {
+                     "value" : [ "// ## Individual codes ##\n\n// list individual codes from code systems used directly in the CQL logic. Individual codes are used when there is\n// a single code from a particular vocabulary standard used to represent a clinical concept. It is considered\n// best-practice not to create value sets containing a single code.","code ","\"Black or African American\"",": ","'2054-5'"," from " ]
+                  }, {
+                     "r" : "35",
+                     "s" : [ {
+                        "value" : [ "\"Race\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Black or African American'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "35",
+               "locator" : "61:49-61:54",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "Race"
+            }
+         }, {
+            "localId" : "38",
+            "locator" : "62:1-62:50",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "White",
+            "id" : "2106-3",
+            "display" : "White",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "38",
+                  "s" : [ {
+                     "value" : [ "","code ","\"White\"",": ","'2106-3'"," from " ]
+                  }, {
+                     "r" : "37",
+                     "s" : [ {
+                        "value" : [ "\"Race\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'White'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "37",
+               "locator" : "62:29-62:34",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "Race"
+            }
+         }, {
+            "localId" : "40",
+            "locator" : "65:1-65:81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Confused",
+            "id" : "130987000",
+            "display" : "Acute confusion (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "40",
+                  "s" : [ {
+                     "value" : [ "// Code from Alertness Scale","code ","\"Confused\"",": ","'130987000'"," from " ]
+                  }, {
+                     "r" : "39",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Acute confusion (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "39",
+               "locator" : "65:35-65:45",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "42",
+            "locator" : "68:1-68:130",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Performance Status 0",
+            "id" : "373803006",
+            "display" : "World Health Organization performance status grade 0 (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "42",
+                  "s" : [ {
+                     "value" : [ "// Codes from WHO Performance Status scale","code ","\"Performance Status 0\"",": ","'373803006'"," from " ]
+                  }, {
+                     "r" : "41",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'World Health Organization performance status grade 0 (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "41",
+               "locator" : "68:47-68:57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "44",
+            "locator" : "69:1-69:130",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Performance Status 1",
+            "id" : "373804000",
+            "display" : "World Health Organization performance status grade 1 (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "44",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Performance Status 1\"",": ","'373804000'"," from " ]
+                  }, {
+                     "r" : "43",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'World Health Organization performance status grade 1 (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "43",
+               "locator" : "69:47-69:57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "46",
+            "locator" : "70:1-70:130",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Performance Status 2",
+            "id" : "373805004",
+            "display" : "World Health Organization performance status grade 2 (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "46",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Performance Status 2\"",": ","'373805004'"," from " ]
+                  }, {
+                     "r" : "45",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'World Health Organization performance status grade 2 (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "45",
+               "locator" : "70:47-70:57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "48",
+            "locator" : "71:1-71:130",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Performance Status 3",
+            "id" : "373806003",
+            "display" : "World Health Organization performance status grade 3 (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "48",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Performance Status 3\"",": ","'373806003'"," from " ]
+                  }, {
+                     "r" : "47",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'World Health Organization performance status grade 3 (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "47",
+               "locator" : "71:47-71:57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "50",
+            "locator" : "72:1-72:130",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Performance Status 4",
+            "id" : "373807007",
+            "display" : "World Health Organization performance status grade 4 (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "50",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Performance Status 4\"",": ","'373807007'"," from " ]
+                  }, {
+                     "r" : "49",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'World Health Organization performance status grade 4 (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "49",
+               "locator" : "72:47-72:57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "52",
+            "locator" : "74:1-74:93",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Blood pressure",
+            "id" : "85354-9",
+            "display" : "Blood pressure systolic and diastolic",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "52",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Blood pressure\"",": ","'85354-9'"," from " ]
+                  }, {
+                     "r" : "51",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Blood pressure systolic and diastolic'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "51",
+               "locator" : "74:39-74:45",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "54",
+            "locator" : "75:1-75:105",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Blood pressure, deprecated",
+            "id" : "55284-4",
+            "display" : "Blood pressure systolic and diastolic",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "54",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Blood pressure, deprecated\"",": ","'55284-4'"," from " ]
+                  }, {
+                     "r" : "53",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Blood pressure systolic and diastolic'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "53",
+               "locator" : "75:51-75:57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "56",
+            "locator" : "76:1-76:87",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Systolic blood pressure",
+            "id" : "8480-6",
+            "display" : "Systolic blood pressure",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "56",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Systolic blood pressure\"",": ","'8480-6'"," from " ]
+                  }, {
+                     "r" : "55",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Systolic blood pressure'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "55",
+               "locator" : "76:47-76:53",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "58",
+            "locator" : "77:1-77:89",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Diastolic blood pressure",
+            "id" : "8462-4",
+            "display" : "Diastolic blood pressure",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "58",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Diastolic blood pressure\"",": ","'8462-4'"," from " ]
+                  }, {
+                     "r" : "57",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Diastolic blood pressure'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "57",
+               "locator" : "77:48-77:54",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "60",
+            "locator" : "79:1-79:61",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Heart rate",
+            "id" : "8867-4",
+            "display" : "Heart rate",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "60",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Heart rate\"",": ","'8867-4'"," from " ]
+                  }, {
+                     "r" : "59",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Heart rate'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "59",
+               "locator" : "79:34-79:40",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "62",
+            "locator" : "80:1-80:75",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Oxygen saturation",
+            "id" : "2708-6",
+            "display" : "Oxygen saturation",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "62",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Oxygen saturation\"",": ","'2708-6'"," from " ]
+                  }, {
+                     "r" : "61",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Oxygen saturation'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "61",
+               "locator" : "80:41-80:47",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "64",
+            "locator" : "81:1-81:107",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Pulse oximetry",
+            "id" : "59408-5",
+            "display" : "Oxygen saturation in Arterial blood by Pulse oximetry",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "64",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Pulse oximetry\"",": ","'59408-5'"," from " ]
+                  }, {
+                     "r" : "63",
+                     "s" : [ {
+                        "value" : [ "LOINC" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Oxygen saturation in Arterial blood by Pulse oximetry'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "63",
+               "locator" : "81:39-81:43",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "66",
+            "locator" : "82:1-82:73",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Respiratory rate",
+            "id" : "9279-1",
+            "display" : "Respiratory rate",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "66",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Respiratory rate\"",": ","'9279-1'"," from " ]
+                  }, {
+                     "r" : "65",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Respiratory rate'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "65",
+               "locator" : "82:40-82:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "68",
+            "locator" : "83:1-83:73",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Body temperature",
+            "id" : "8310-5",
+            "display" : "Body temperature",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "68",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Body temperature\"",": ","'8310-5'"," from " ]
+                  }, {
+                     "r" : "67",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Body temperature'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "67",
+               "locator" : "83:40-83:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "70",
+            "locator" : "84:1-84:63",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Body height",
+            "id" : "8302-2",
+            "display" : "Body height",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "70",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Body height\"",": ","'8302-2'"," from " ]
+                  }, {
+                     "r" : "69",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Body height'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "69",
+               "locator" : "84:35-84:41",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "72",
+            "locator" : "85:1-85:64",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Body weight",
+            "id" : "29463-7",
+            "display" : "Body weight",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "72",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Body weight\"",": ","'29463-7'"," from " ]
+                  }, {
+                     "r" : "71",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Body weight'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "71",
+               "locator" : "85:36-85:42",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "74",
+            "locator" : "86:1-86:72",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Body mass index",
+            "id" : "39156-5",
+            "display" : "Body mass index",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "74",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Body mass index\"",": ","'39156-5'"," from " ]
+                  }, {
+                     "r" : "73",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Body mass index'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "73",
+               "locator" : "86:40-86:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "76",
+            "locator" : "87:1-87:89",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Inhaled oxygen flow rate",
+            "id" : "3151-8",
+            "display" : "Inhaled oxygen flow rate",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "76",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Inhaled oxygen flow rate\"",": ","'3151-8'"," from " ]
+                  }, {
+                     "r" : "75",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Inhaled oxygen flow rate'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "75",
+               "locator" : "87:48-87:54",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOINC"
+            }
+         } ]
+      }
+   }
+}
+
